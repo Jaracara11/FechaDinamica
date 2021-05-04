@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     const arrayMeses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
     var fechaMes = new Date();
 
@@ -22,3 +22,11 @@ $(document).ready(function() {
         $('#mes3').text(arrayMeses[fechaMes.getMonth() - 3]);
     }
 });
+
+//Funcion Alterna en Vanilla JS:
+function displayDate() {
+    var efMensual = document.getElementById("efMensual");
+    var fechaMes = new Date();
+    let options = { month: 'long' }
+    efMensual.textContent = fechaMes.toLocaleDateString('es-ES', options);
+}
